@@ -66,7 +66,7 @@ module.exports = function (deployer, network, accounts) {
     .then(() => a.registerDevice(deviceRegIdHash, 'smartphone', deviceRegPubKey, { from: actors.mfg }))
     .then(tx => console.log('Device registered by mfg:', deviceRegIdHash, tx.receipt.status))
     .then(() => a.registerAndActivateDevice(deviceAct, 'smartphone', deviceActPubKey, { from: actors.mfg }))
-    .then(tx => console.log('Device registered and activated by mfg:', tx.receipt.status))
+    .then(tx => console.log('Device registered and activated by mfg:', deviceAct, tx.receipt.status))
     // create irn-config.json
     .then(() => JSON.stringify({
       nodeUrl: 'http://localhost:8545',
