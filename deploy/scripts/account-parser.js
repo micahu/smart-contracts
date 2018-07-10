@@ -6,12 +6,12 @@
 //---- 3. cd to this directory and run `node account-parser.js`
 //---- 4. on successful run, see output files in `/output` folder
 //---- input ex.  `[{ address: '0x1234abcdABCD1234abcdABCD1234abcdABCD1234', email: 'kevDurant@nyk.com' }]`
-//---- output ex. `[{ address: '0x1234abcdABCD1234abcdABCD1234abcdABCD1234', email: 'kevDurant@nyk.com', mfgId: 'DmV9' }]`
+//---- output ex. `[{ address: '0x1234abcdABCD1234abcdABCD1234abcdABCD1234', email: 'kevDurant@nyk.com', mfgId: 'DMV9' }]`
 
 const fs = require('fs')
 const createCsvWriter = require('csv-writer').createObjectCsvWriter
 const input = require('./input.json')
-const str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+const str = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 const myChars = [...str]
 
 let output = []
