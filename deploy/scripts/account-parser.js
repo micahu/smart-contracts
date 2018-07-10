@@ -26,7 +26,7 @@ input.forEach(account => {
 
   // pick last un-maxed digit
   for(let i = 3; i >= 1; i--) {
-    if(MfgId[i] == myChars[61]) {
+    if(MfgId[i] == myChars[35]) {
       MfgId[i] = '0' // reset digit value to 0 before moving to next digit
       continue // digit is maxed, so continue
     }
